@@ -24,5 +24,24 @@ namespace Laba1
             last = node;
             count++;
         }
+        public void Print()
+        {
+            Node<T> curent = first;
+            if (first == null)
+            {
+                Console.WriteLine("This List is empty");
+            }
+            else
+            {
+                while (curent != last)
+                {
+                    Console.Write(curent.Data + ", ");
+                    curent = curent.Next;
+
+                }
+                Console.Write(curent.Data);
+                Console.WriteLine();
+            }
+        }
     }
 }

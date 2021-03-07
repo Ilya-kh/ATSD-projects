@@ -7,7 +7,13 @@ namespace Laba1
         static void Main(string[] args)
         {
             LinkedList<int> List = new LinkedList<int>();
-            List.AddItem(1);
+            int k = Convert.ToInt32(Console.ReadLine());
+            int l;
+            for (int i = 0; i < k; i++)
+            {
+                l = Convert.ToInt32(Console.ReadLine());
+                List.AddItem(l);
+            }
         }
     }
 }
