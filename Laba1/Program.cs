@@ -20,6 +20,7 @@ namespace Laba1
             List.DeleteItem(l);
             Console.WriteLine("Вывод Листа: ");
             List.Print();
+            Console.WriteLine("Размер Листа: " + List.Sizeof());
         }
     }
 }

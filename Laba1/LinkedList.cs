@@ -75,5 +75,9 @@ namespace Laba1
             }
             return false;
         }
+        public int Sizeof()
+        {
+            return count;
+        }
     }
 }
