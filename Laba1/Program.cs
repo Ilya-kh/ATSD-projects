@@ -25,6 +25,7 @@ namespace Laba1
             Console.WriteLine("Поиск елемента в Листе: ");
             l = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(List.Search(l));
+            Console.WriteLine("Пустой ли Лист? : " + List.isEmpty());
         }
     }
 }

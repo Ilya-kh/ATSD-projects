@@ -89,5 +89,10 @@ namespace Laba1
             }
             return false;
         }
+        public bool isEmpty()
+        {
+            if (count > 0) return false;
+            else return true;
+        }
     }
 }
