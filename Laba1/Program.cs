@@ -14,6 +14,12 @@ namespace Laba1
                 l = Convert.ToInt32(Console.ReadLine());
                 List.AddItem(l);
             }
+            Console.WriteLine("Вывод Листа: ");
+            List.Print();
+            l = Convert.ToInt32(Console.ReadLine());
+            List.DeleteItem(l);
+            Console.WriteLine("Вывод Листа: ");
+            List.Print();
         }
     }
 }

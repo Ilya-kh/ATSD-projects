@@ -43,5 +43,37 @@ namespace Laba1
                 Console.WriteLine();
             }
         }
+        public bool DeleteItem(T Data)
+        {
+            Node<T> curent = first;
+            Node<T> previous = null;
+            while (curent != null)
+            {
+                if (curent.Data.Equals(Data))
+                {
+                    if (previous != null)
+                    {
+                        previous.Next = curent.Next;
+                        if (curent.Next == null)
+                        {
+                            last = previous;
+                        }
+                    }
+                    else
+                    {
+                        first = first.Next;
+                        if (first == null)
+                        {
+                            last = null;
+                        }
+                    }
+                    count--;
+                    return true;
+                }
+                previous = curent;
+                curent = curent.Next;
+            }
+            return false;
+        }
     }
 }
