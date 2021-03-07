@@ -6,7 +6,8 @@ namespace Laba1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LinkedList<int> List = new LinkedList<int>();
+            List.AddItem(1);
         }
     }
 }
