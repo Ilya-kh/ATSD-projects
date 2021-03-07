@@ -16,11 +16,15 @@ namespace Laba1
             }
             Console.WriteLine("Вывод Листа: ");
             List.Print();
+            Console.WriteLine("Удалить елемент: ");
             l = Convert.ToInt32(Console.ReadLine());
             List.DeleteItem(l);
             Console.WriteLine("Вывод Листа: ");
             List.Print();
             Console.WriteLine("Размер Листа: " + List.Sizeof());
+            Console.WriteLine("Поиск елемента в Листе: ");
+            l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(List.Search(l));
         }
     }
 }

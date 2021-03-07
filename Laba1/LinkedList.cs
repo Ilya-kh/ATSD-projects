@@ -79,5 +79,15 @@ namespace Laba1
         {
             return count;
         }
+        public bool Search(T item)
+        {
+            Node<T> curent = first;
+            while (curent != null)
+            {
+                if (Convert.ToInt32(curent.Data) == Convert.ToInt32(item)) return true;
+                curent = curent.Next;
+            }
+            return false;
+        }
     }
 }
