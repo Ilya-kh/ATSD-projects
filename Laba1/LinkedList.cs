@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace Laba1
 {
-    class LinkedList<T> where T : IComparable
+    class LinkedList<T>  : IEnumerable<T>, IComparer<T>
     {
         Node<T> first;
         Node<T> last;
@@ -93,6 +95,26 @@ namespace Laba1
         {
             if (count > 0) return false;
             else return true;
+        }
+
+        public int Compare(T x, T y)
+        {
+            return Comparer.Default.Compare(x, y);
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            var current = first;
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable)this).GetEnumerator();
         }
     }
 }

@@ -7,10 +7,12 @@ namespace Laba1
         static void Main(string[] args)
         {
             LinkedList<int> List = new LinkedList<int>();
+            Console.WriteLine("Введите сколько елементов вы хотите добавить: ");
             int k = Convert.ToInt32(Console.ReadLine());
             int l;
-            for (int i = 0; i < k; i++)
+            for (int i = 1; i <= k; i++)
             {
+                Console.WriteLine("Елемент " + i + ": ");
                 l = Convert.ToInt32(Console.ReadLine());
                 List.AddItem(l);
             }
@@ -26,6 +28,7 @@ namespace Laba1
             l = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(List.Search(l));
             Console.WriteLine("Пустой ли Лист? : " + List.isEmpty());
+
         }
     }
 }
