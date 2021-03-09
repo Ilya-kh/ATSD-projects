@@ -50,6 +50,7 @@ namespace Laba1
         }
         public void Print()
         {
+            Console.WriteLine("Вывод листа: ");
             Node<T> curent = first;
             if (first == null)
             {
