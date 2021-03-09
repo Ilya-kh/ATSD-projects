@@ -14,7 +14,7 @@ namespace Laba1
             {
                 Console.WriteLine("Елемент " + i + ": ");
                 l = Convert.ToInt32(Console.ReadLine());
-                List.AddItem(l);
+                List.AddItem_sort(l);
             }
             Console.WriteLine("Вывод Листа: ");
             List.Print();

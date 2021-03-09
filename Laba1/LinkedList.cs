@@ -26,6 +26,28 @@ namespace Laba1
             last = node;
             count++;
         }
+        public void AddItem_sort(T data)
+        {
+            Node<T> node = new Node<T>(data);
+            Node<T> current = null;
+            if (first == null || Comparer.Default.Compare(first.Data, node.Data) > 0)
+            {
+                node.Next = first;
+                first = node;
+            }
+            else
+            {
+                current = first;
+                while (Comparer.Default.Compare(current.Next.Data, node.Data) < 0 && current.Next != null)
+                {
+                    current = current.Next;
+                }
+                node.Next = current.Next;
+                current.Next = node;
+
+            }
+            count++;
+        }
         public void Print()
         {
             Node<T> curent = first;
@@ -35,13 +57,13 @@ namespace Laba1
             }
             else
             {
-                while (curent != last)
+                while (curent != null)
                 {
-                    Console.Write(curent.Data + ", ");
+                    Console.Write(curent.Data + " ");
                     curent = curent.Next;
 
                 }
-                Console.Write(curent.Data);
+                
                 Console.WriteLine();
             }
         }
