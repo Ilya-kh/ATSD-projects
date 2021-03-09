@@ -12,7 +12,8 @@ namespace Laba1
             Console.WriteLine("3 - Поиск элемента");
             Console.WriteLine("4 - Размер листа");
             Console.WriteLine("5 - Проверка пустой ли лист?");
-            Console.WriteLine("6 - Bыход");
+            Console.WriteLine("6 - Очистить лист");
+            Console.WriteLine("7 - Bыход");
             bool k = true;
             int l;
             while (k)
@@ -47,6 +48,10 @@ namespace Laba1
                         Console.WriteLine(List.isEmpty());
                         break;
                     case 6:
+                        List.Clear();
+                        Console.WriteLine("Лист очищен");
+                        break;
+                    case 7:
                         k = false;
                         break;
                 }
