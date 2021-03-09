@@ -38,7 +38,7 @@ namespace Laba1
             else
             {
                 current = first;
-                while (Comparer.Default.Compare(current.Next.Data, node.Data) < 0 && current.Next != null)
+                while (current.Next != null && Comparer.Default.Compare(current.Next.Data, node.Data) < 0 )
                 {
                     current = current.Next;
                 }
@@ -119,6 +119,12 @@ namespace Laba1
             if (count > 0) return false;
             else return true;
         }
+        public void Clear() 
+        {
+            first = null;
+            last = null;
+            count = 0;
+        }
 
         public int Compare(T x, T y)
         {
@@ -130,7 +136,7 @@ namespace Laba1
             var current = first;
             while (current != null)
             {
-                yield return current.Data;
+                yield    return current.Data;
                 current = current.Next;
             }
         }

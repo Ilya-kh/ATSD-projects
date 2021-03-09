@@ -6,7 +6,7 @@ namespace Laba1
     {
         static void Main(string[] args)
         {
-            LinkedList<int> List = new LinkedList<int>();
+            LinkedList<float> List = new LinkedList<float>();
             Console.WriteLine("1 - Добавление элемента");
             Console.WriteLine("2 - Удаление элемента");
             Console.WriteLine("3 - Поиск элемента");
@@ -53,6 +53,9 @@ namespace Laba1
                         break;
                     case 7:
                         k = false;
+                        break;
+                    default:
+                        Console.WriteLine("Вы ввели неправильные данные!");
                         break;
                 }
             }
