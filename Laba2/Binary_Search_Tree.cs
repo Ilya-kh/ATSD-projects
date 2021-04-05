@@ -26,9 +26,16 @@ namespace Laba2
         {
             var List = new List<T>();
             Print_1(List,head);
+            Console.WriteLine("Ascending order: ");
             foreach (var i in List)
             {
                 Console.Write(i + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Descending order: ");
+            for (int i = List.Count-1; i >= 0; i--) 
+            {
+                Console.Write(List[i] + " ");
             }
 
         }
@@ -48,5 +55,6 @@ namespace Laba2
             }
             return List;
         }
+       
     }
 }
