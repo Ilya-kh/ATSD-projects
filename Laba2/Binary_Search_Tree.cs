@@ -8,5 +8,19 @@ namespace Laba2
     {
         public Node<T> head { get; set; }
         public int count = 0;
+
+        public void AddNodeHead(T number)
+        {
+
+            if (head == null)
+            {
+                Node<T> node = new Node<T>(number);
+                head = node;
+            }
+            else
+            {
+                head.AddNode(number);
+            }
+        }
     }
 }

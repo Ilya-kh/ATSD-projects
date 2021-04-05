@@ -13,5 +13,32 @@ namespace Laba2
             Data = data;
         }
         public T Data;
+
+        public void AddNode(T number)
+        {
+            Node<T> node = new Node<T>(number);
+            if (node.Data.CompareTo(Data) == 1)
+            {
+                if (right == null)
+                {
+                    right = node;
+                }
+                else
+                {
+                    right.AddNode(number);
+                }
+            }
+            else
+            {
+                if (left == null)
+                {
+                    left = node;
+                }
+                else
+                {
+                    left.AddNode(number);
+                }
+            }
+        }
     }
 }

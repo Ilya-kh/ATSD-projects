@@ -6,7 +6,9 @@ namespace Laba2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var newtree = new Tree<int>();
+            for (int i = 1; i <= 6; i++)
+                newtree.AddNodeHead(i);
         }
     }
 }
