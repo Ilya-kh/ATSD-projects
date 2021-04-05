@@ -22,5 +22,31 @@ namespace Laba2
                 head.AddNode(number);
             }
         }
+        public void Print() 
+        {
+            var List = new List<T>();
+            Print_1(List,head);
+            foreach (var i in List)
+            {
+                Console.Write(i + " ");
+            }
+
+        }
+        public List<T> Print_1(List<T> List, Node<T> current)
+        {
+            if (current != null)
+            {
+                if (current.left != null)
+                {
+                    Print_1(List, current.left);
+                }
+                List.Add(current.Data);
+                if (current.right != null)
+                {
+                    Print_1(List, current.right);
+                }
+            }
+            return List;
+        }
     }
 }

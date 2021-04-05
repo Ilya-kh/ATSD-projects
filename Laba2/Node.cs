@@ -40,5 +40,10 @@ namespace Laba2
                 }
             }
         }
+        public void Printt(Node<T> current) 
+        {
+
+        }
+      
     }
 }
