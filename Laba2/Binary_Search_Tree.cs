@@ -6,55 +6,76 @@ namespace Laba2
 {
     public class Tree<T> where T : IComparable<T>
     {
-        public Node<T> head { get; set; }
+        public Node<T> Head { get; set; }
         public int count = 0;
 
         public void AddNodeHead(T number)
         {
 
-            if (head == null)
+            if (Head == null)
             {
                 Node<T> node = new Node<T>(number);
-                head = node;
+                Head = node;
             }
             else
             {
-                head.AddNode(number);
+                Head.AddNode(number);
             }
         }
         public void Print() 
         {
-            var List = new List<T>();
-            Print_1(List,head);
+            var list = new List<T>();
+            Print_1(list,Head);
             Console.WriteLine("Ascending order: ");
-            foreach (var i in List)
+            foreach (var i in list)
             {
                 Console.Write(i + " ");
             }
             Console.WriteLine();
             Console.WriteLine("Descending order: ");
-            for (int i = List.Count-1; i >= 0; i--) 
+            for (int i = list.Count-1; i >= 0; i--) 
             {
-                Console.Write(List[i] + " ");
+                Console.Write(list[i] + " ");
             }
 
         }
-        public List<T> Print_1(List<T> List, Node<T> current)
+        public List<T> Print_1(List<T> list, Node<T> current)
         {
             if (current != null)
             {
-                if (current.left != null)
+                if (current.Left != null)
                 {
-                    Print_1(List, current.left);
+                    Print_1(list, current.Left);
                 }
-                List.Add(current.Data);
-                if (current.right != null)
+                list.Add(current.Data);
+                if (current.Right != null)
                 {
-                    Print_1(List, current.right);
+                    Print_1(list, current.Right);
                 }
             }
-            return List;
+            return list;
         }
+        public void CountNodes_() {
+            int countt=CountNodes(Head.Left);
+            Console.WriteLine();
+            Console.WriteLine("the number of Left son nodes in a BBST:" + countt);
+            
+        }        
+        public int CountNodes(Node<T> current,int countt=0) 
+        {
+            if (current != null)
+            {
+                if (current.Left!=null)
+                    CountNodes(current.Left, countt++);
+               
+                if (current.Right!=null)
+                    CountNodes(current.Right, countt++);
+                countt++;
+            }
+            return countt;  
+        }
+
        
+
     }
 }

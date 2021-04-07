@@ -6,8 +6,8 @@ namespace Laba2
 {
     public class Node<T> where T : IComparable<T>
     {
-        public Node<T> left { get; set; }
-        public Node<T> right { get; set; }
+        public Node<T> Left { get; set; }
+        public Node<T> Right { get; set; }
         public Node(T data)
         {
             Data = data;
@@ -19,31 +19,26 @@ namespace Laba2
             Node<T> node = new Node<T>(number);
             if (node.Data.CompareTo(Data) == 1)
             {
-                if (right == null)
+                if (Right == null)
                 {
-                    right = node;
+                    Right = node;
                 }
                 else
                 {
-                    right.AddNode(number);
+                    Right.AddNode(number);
                 }
             }
             else
             {
-                if (left == null)
+                if (Left == null)
                 {
-                    left = node;
+                    Left = node;
                 }
                 else
                 {
-                    left.AddNode(number);
+                    Left.AddNode(number);
                 }
             }
         }
-        public void Printt(Node<T> current) 
-        {
-
-        }
-      
     }
 }
