@@ -7,12 +7,12 @@ namespace Laba2
         static void Main(string[] args)
         {
             var newtree = new Tree<int>();
-            newtree.AddNodeHead(8);
-            newtree.AddNodeHead(5);
-            newtree.AddNodeHead(7);
-            newtree.AddNodeHead(4);
-            newtree.AddNodeHead(2);
-            newtree.AddNodeHead(10);
+            newtree.NewNode(8);
+            newtree.NewNode(5);
+            newtree.NewNode(7);
+            newtree.NewNode(4);
+            newtree.NewNode(2);
+            newtree.NewNode(10);
             newtree.Print();
             newtree.CountNodes_();
             

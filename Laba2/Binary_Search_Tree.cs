@@ -1,26 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace Laba2
 {
     public class Tree<T> where T : IComparable<T>
     {
-        public Node<T> Head { get; set; }
-        public int count = 0;
+        private Node<T> Head { get; set; }
+        public int Count = 0;
 
-        public void AddNodeHead(T number)
+        public void NewNode(T number)
         {
-
+            Node<T> node = new Node<T>(number);
             if (Head == null)
             {
-                Node<T> node = new Node<T>(number);
                 Head = node;
             }
             else
             {
-                Head.AddNode(number);
+                AddNode(Head,node);
             }
+        }
+        private Node<T> AddNode(Node<T> current, Node<T> node)
+        {
+            if (current == null)
+            {
+                current = node;
+                return current;
+            }
+
+            if (node.Data.CompareTo(current.Data) < 0)
+            {
+                current.Left = AddNode(current.Left, node);
+                current = Balance(current);
+            }
+            else if(node.Data.CompareTo(current.Data) > 0)
+            {
+                current.Right = AddNode(current.Right, node);
+                current = Balance(current);
+            }
+            return current;
         }
         public void Print() 
         {
@@ -39,7 +58,7 @@ namespace Laba2
             }
 
         }
-        public List<T> Print_1(List<T> list, Node<T> current)
+        private List<T> Print_1(List<T> list, Node<T> current)
         {
             if (current != null)
             {
@@ -75,7 +94,88 @@ namespace Laba2
             return countt;  
         }
 
-       
+        private Node<T> Balance(Node<T> current)
+        {
+            if (current != null)
+            {
+                if (Differense(current) > 1)
+                {
+                    if (Differense(current.Left) > 0)
+                    {
+                        Right_Left_Rotation(current);
+                    }
+                    else
+                    {
+                        Right_Rotation(current);
+                    }
+                }
+                else if (Differense(current) < -1)
+                {
+                    if (Differense(current.Right) > 0)
+                    {
+                        Left_Right_Rotation(current);
+                    }
+                    else
+                    {
+                        Left_Rotation(current);
+                    }
+                }
+            }
+            return current;
+        }
 
+        private int Differense(Node<T> current)
+        {
+            int lef = GetHeight(current.Left);
+            int righ = GetHeight(current.Right);
+            int difference = lef - righ;
+            return difference;
+        }
+
+        private int GetHeight(Node<T> current)
+        {
+            int height = 0;
+            if (current != null)
+            {
+                int l = GetHeight(current.Left);
+                int r = GetHeight(current.Right);
+                int res = Maximum(l, r);
+                height = res + 1;
+            }
+            return height;
+        }
+        private static int Maximum(int x, int y)
+        {
+            return x > y ? x : y;
+        }
+
+        private Node<T> Left_Rotation(Node<T> current)
+        {
+            Node<T> newNode = current.Right;
+            current.Right=newNode.Left;
+            newNode.Left = current;
+            return newNode;
+        }
+
+        private Node<T> Right_Rotation(Node<T> current)
+        {
+            Node<T> newNode = current.Left;
+            current.Left = newNode.Right;
+            newNode.Right = current;
+            return newNode;
+        }
+
+        private Node<T> Left_Right_Rotation(Node<T> current)
+        {
+            Node<T> newNode = current.Left;
+            current.Left = Left_Rotation(newNode);
+            return Right_Rotation(current);
+        }
+        private Node<T> Right_Left_Rotation(Node<T> current)
+        {
+            Node<T> newNode = current.Right;
+            current.Right = Right_Rotation(newNode);
+            return Left_Rotation(current);
+        }
     }
 }
