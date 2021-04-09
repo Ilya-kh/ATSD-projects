@@ -260,7 +260,11 @@ namespace Laba2
                 return Search(current.Right,data);
             else 
               return Search(current.Left,data);
-           
+        }
+
+        public bool IsEmpty()
+        {
+            return Head == null;
         }
     }
 }

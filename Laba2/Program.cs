@@ -20,7 +20,7 @@ namespace Laba2
             newtree.SearchNode(7);
             newtree.SearchNode(11);
             newtree.SearchNode(10);
-            
+            Console.WriteLine(newtree.IsEmpty()); 
         }
     }
 }
