@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71efbd53-3234-4d4e-8088-c973e5f0d7e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Laba2/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laba2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laba2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Laba2/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Laba2/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binary_Search_Tree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Binary_Search_Tree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Laba2.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Laba2.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +34,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Program.cs" />
       <option value="$PROJECT_DIR$/Node.cs" />
       <option value="$PROJECT_DIR$/Binary_Search_Tree.cs" />
+      <option value="$PROJECT_DIR$/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qoJlQ3gagCxzvbAdrEw3KuVBlq" />
@@ -86,7 +84,7 @@
       <updated>1617740161799</updated>
       <workItem from="1617740168794" duration="2040000" />
       <workItem from="1617787799059" duration="14236000" />
-      <workItem from="1617972261886" duration="3056000" />
+      <workItem from="1617972261886" duration="7112000" />
     </task>
     <servers />
   </component>

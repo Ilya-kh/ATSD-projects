@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.VisualBasic.FileIO;
 
 
 namespace Laba2
@@ -163,6 +164,78 @@ namespace Laba2
             Node<T> newNode = current.Right;
             current.Right = Right_Rotation(newNode);
             return Left_Rotation(current);
+        }
+        public void DeleteNode(T data)
+        {
+            Head = Delete(Head, data);
+        }
+
+        private Node<T> Delete(Node<T> current, T data)
+        {
+            Node<T> privious;
+            if (current == null)
+            {
+                return null;
+            }
+            if (data.CompareTo(current.Data) < 0)
+            {
+                current.Left=Delete(current.Left, data);
+                if (Differense(current) == -2)
+                {
+                    if (Differense(current.Right)<=0)
+                    {
+                        current = Left_Rotation(current);
+                    }
+                    else
+                    {
+                        current = Left_Right_Rotation(current);
+                    }
+                }
+            } else if (data.CompareTo(current.Data) > 0)
+            {
+                current.Right = Delete(current.Right, data);
+                if (Differense(current) == 2)
+                {
+                    if (Differense(current.Left)>=0)
+                    {
+                        current = Right_Rotation(current);
+                    }
+                    else
+                    {
+                        current = Right_Left_Rotation(current);
+                    }
+                }
+            }
+            else
+            {
+                if (current.Right != null)
+                {
+                    privious = current.Right;
+                    while (privious.Left != null)
+                    {
+                        privious = privious.Left;
+                    }
+
+                    current.Data = privious.Data;
+                    current.Right = Delete(current.Right, privious.Data);
+                    if (Differense(current) == 2)
+                    {
+                        if (Differense(current.Left) >= 0)
+                        {
+                            current = (current);
+                        }
+                        else
+                        {
+                            current = Left_Right_Rotation(current);
+                        }
+                    }
+                }
+                else
+                {
+                    return current.Left;
+                }
+            }
+            return current;
         }
     }
 }

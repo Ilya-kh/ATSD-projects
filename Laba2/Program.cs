@@ -14,6 +14,8 @@ namespace Laba2
             newtree.NewNode(2);
             newtree.NewNode(10);
             newtree.Print();
+            newtree.DeleteNode(4);
+            newtree.Print();
             newtree.CountNodes_();
             
         }
