@@ -392,5 +392,14 @@ namespace Laba2
             ToList(Head, list);
             return list;
         }
+
+        public void InsertBBST(Tree<T> current)
+        {
+            var list= current.ToList();
+            foreach (var i in list)
+            {
+                NewNode(i);
+            }
+        }
     }   
 }
