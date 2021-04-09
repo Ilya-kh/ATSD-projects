@@ -222,7 +222,7 @@ namespace Laba2
                     {
                         if (Differense(current.Left) >= 0)
                         {
-                            current = (current);
+                            current =Right_Rotation(current);
                         }
                         else
                         {
@@ -236,6 +236,31 @@ namespace Laba2
                 }
             }
             return current;
+        }
+        public void SearchNode(T data)
+        {
+            if (Search(Head, data) == null)
+            {
+                Console.WriteLine($"This node {data} isn't in the tree");
+                return;
+            }
+            if (Search(Head,data).Data.Equals(data))
+                Console.WriteLine($"This node {data} is in the tree");
+            else
+                Console.WriteLine($"This node {data} isn't in the tree");
+        }
+        private Node<T> Search(Node<T> current, T data)
+        {
+            if (current == null) return null ; 
+            if (current.Data.Equals(data))
+            {
+                return current;
+            }
+            if (current.Data.CompareTo(data) == -1)
+                return Search(current.Right,data);
+            else 
+              return Search(current.Left,data);
+           
         }
     }
 }

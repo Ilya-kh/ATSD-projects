@@ -35,8 +35,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Node.cs" />
-      <option value="$PROJECT_DIR$/Binary_Search_Tree.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
+      <option value="$PROJECT_DIR$/Binary_Search_Tree.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qoJlQ3gagCxzvbAdrEw3KuVBlq" />
@@ -84,7 +84,7 @@
       <updated>1617740161799</updated>
       <workItem from="1617740168794" duration="2040000" />
       <workItem from="1617787799059" duration="14236000" />
-      <workItem from="1617972261886" duration="7112000" />
+      <workItem from="1617972261886" duration="9784000" />
     </task>
     <servers />
   </component>
@@ -111,14 +111,8 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="DotNetProject">
-        <watch expression="current.Left" language="C#" />
-        <watch expression="current.Right" language="C#" />
-        <watch expression="current" language="C#" />
-        <watch expression="Head" language="C#" />
-        <watch expression="Head.Left" language="C#" />
-        <watch expression="Head.Right" language="C#" />
-        <watch expression="Head.Right.Right" language="C#" />
-        <watch expression="Head.Right.Left" language="C#" />
+        <watch expression="data" language="C#" />
+        <watch expression="current.Data" language="C#" />
       </configuration>
     </watches-manager>
   </component>
