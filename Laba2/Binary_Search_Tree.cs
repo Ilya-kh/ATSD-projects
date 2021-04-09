@@ -287,7 +287,7 @@ namespace Laba2
             return CountNodes(Head);
         }
         
-        internal void print_preorder(Node<T> current)
+        private void print_preorder(Node<T> current)
         {
             if (current != null)
             {
@@ -297,7 +297,7 @@ namespace Laba2
             }
         }
 
-        public void print_postorder(Node<T> current)
+        private void print_postorder(Node<T> current)
         {
             if (current != null)
             {
@@ -307,7 +307,7 @@ namespace Laba2
             }
         }
 
-        public void print_inorder(Node<T> current)
+        private void print_inorder(Node<T> current)
         {
             if (current != null)
             {
@@ -315,6 +315,22 @@ namespace Laba2
                 Console.Write(current.Data + " ");
                 print_preorder(current.Right);
             }
+        }
+
+        public int SumKeys()
+        {
+            Console.WriteLine("the sum of keys in right son nodes in a BBST ");
+            return Sum(Head.Right);
+        }
+
+        private int Sum(Node<T> current,int count=0)
+        {
+            if (current == null)
+            {
+                return 0;
+            }
+            return Convert.ToInt32(current.Data) + Sum(current.Left, count) + Sum(current.Right, count);
+            
         }
     }
 }

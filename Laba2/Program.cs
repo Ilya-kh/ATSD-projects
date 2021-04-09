@@ -22,6 +22,7 @@ namespace Laba2
             newtree.SearchNode(10);
             Console.WriteLine(newtree.IsEmpty());
             Console.WriteLine(newtree.Size());
+            Console.WriteLine(newtree.SumKeys());
         }
     }
 }
