@@ -14,4 +14,5 @@ namespace Laba2
         }
         public T Data;
     }
+    
 }

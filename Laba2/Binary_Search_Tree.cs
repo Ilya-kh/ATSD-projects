@@ -38,19 +38,29 @@ namespace Laba2
         {
             var list = new List<T>();
             list=Print_1(list,Head);
-            Console.WriteLine("Ascending order: ");
+            Console.WriteLine("Ascending order : ");
             foreach (var i in list)
             {
                 Console.Write(i + " ");
             }
             Console.WriteLine();
-            Console.WriteLine("Descending order: ");
+            Console.WriteLine("Descending order : ");
             for (int i = list.Count-1; i >= 0; i--) 
             {
                 Console.Write(list[i] + " ");
             }
-
+            Console.WriteLine();
+            Console.WriteLine("Inorder : ");
+            print_inorder(Head);
+            Console.WriteLine();
+            Console.WriteLine("Preorder : ");
+            print_preorder(Head);
+            Console.WriteLine();
+            Console.WriteLine("Postorder : ");
+            print_postorder(Head);
+            
         }
+        
         private List<T> Print_1(List<T> list, Node<T> current)
         {
             if (current != null)
@@ -67,11 +77,12 @@ namespace Laba2
             }
             return list;
         }
+        
         public void CountNodes_() {
-            int countt=CountNodes(Head.Left);
             Console.WriteLine();
-            Console.WriteLine("the number of Left son nodes in a BBST:" + countt);
-        }        
+            Console.WriteLine("the number of Left son nodes in a BBST:" + CountNodes(Head.Left));
+        }   
+        
         private static int CountNodes(Node<T> current)
         {
             if (current == null) return 0;
@@ -131,6 +142,7 @@ namespace Laba2
             }
             return height;
         }
+        
         private static int Maximum(int x, int y)
         {
             return x > y ? x : y;
@@ -158,12 +170,14 @@ namespace Laba2
             current.Left = Left_Rotation(newNode);
             return Right_Rotation(current);
         }
+        
         private Node<T> Right_Left_Rotation(Node<T> current)
         {
             Node<T> newNode = current.Right;
             current.Right = Right_Rotation(newNode);
             return Left_Rotation(current);
         }
+        
         public void DeleteNode(T data)
         {
             Head = Delete(Head, data);
@@ -236,6 +250,7 @@ namespace Laba2
             }
             return current;
         }
+        
         public void SearchNode(T data)
         {
             if (Search(Head, data) == null)
@@ -248,6 +263,7 @@ namespace Laba2
             else
                 Console.WriteLine($"This node {data} isn't in the tree");
         }
+        
         private Node<T> Search(Node<T> current, T data)
         {
             if (current == null) return null ; 
@@ -258,15 +274,47 @@ namespace Laba2
             if (current.Data.CompareTo(data) == -1)
                 return Search(current.Right,data);
             else 
-              return Search(current.Left,data);
+                return Search(current.Left,data);
         }
+        
         public bool IsEmpty()
         {
             return Head == null;
         }
+        
         public int Size()
         {
             return CountNodes(Head);
+        }
+        
+        internal void print_preorder(Node<T> current)
+        {
+            if (current != null)
+            {
+                Console.Write(current.Data + " ");
+                print_preorder(current.Left);
+                print_preorder(current.Right);
+            }
+        }
+
+        public void print_postorder(Node<T> current)
+        {
+            if (current != null)
+            {
+                print_preorder(current.Left);
+                print_preorder(current.Right);
+                Console.Write(current.Data + " ");
+            }
+        }
+
+        public void print_inorder(Node<T> current)
+        {
+            if (current != null)
+            {
+                print_preorder(current.Left);
+                Console.Write(current.Data + " ");
+                print_preorder(current.Right);
+            }
         }
     }
 }

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71efbd53-3234-4d4e-8088-c973e5f0d7e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laba2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laba2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binary_Search_Tree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Binary_Search_Tree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Node.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,25 +19,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BA99574A-1BCD-4FBF-A75B-3E887A23B1F2/4/Console.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Binary_Search_Tree.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Универ/АТСД/ATSD-projects/Laba2/Laba2/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/Tree.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BA99574A-1BCD-4FBF-A75B-3E887A23B1F2/4/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/TreeNode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Универ/АТСД/ATSD-projects/Laba2/Laba2/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Универ/АТСД/ATSD-projects/Laba2/Laba2/Node.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Универ/АТСД/ATSD-projects/Laba2/Laba2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Универ/АТСД/ATSD-projects/Laba2/Laba2/Node.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Node.cs" />
-      <option value="$PROJECT_DIR$/Binary_Search_Tree.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
+      <option value="$PROJECT_DIR$/Binary_Search_Tree.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qoJlQ3gagCxzvbAdrEw3KuVBlq" />
@@ -97,7 +96,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="laba2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
