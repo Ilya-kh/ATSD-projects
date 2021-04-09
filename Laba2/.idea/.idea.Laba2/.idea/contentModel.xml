@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\khami\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\khami\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Laba2.1984747778.00" t="ExcludeRecursive" />
+    <e p="E:\Универ\АТСД\ATSD-projects\Laba2\Laba2" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Binary_Search_Tree.cs" t="Include" />
+      <e p="Laba2.csproj" t="IncludeRecursive" />
+      <e p="Laba2.sln" t="IncludeFlat" />
+      <e p="Node.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="Laba2.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+    </e>
+  </component>
+</project>

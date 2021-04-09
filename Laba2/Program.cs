@@ -6,7 +6,22 @@ namespace Laba2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var newtree = new Tree<int>();
+            newtree.NewNode(8);
+            newtree.NewNode(5);
+            newtree.NewNode(7);
+            newtree.NewNode(4);
+            newtree.NewNode(2);
+            newtree.NewNode(10);
+            newtree.Print();
+            newtree.DeleteNode(4);
+            newtree.Print();
+            newtree.CountNodes_();
+            newtree.SearchNode(7);
+            newtree.SearchNode(11);
+            newtree.SearchNode(10);
+            Console.WriteLine(newtree.IsEmpty());
+            Console.WriteLine(newtree.Size());
         }
     }
 }

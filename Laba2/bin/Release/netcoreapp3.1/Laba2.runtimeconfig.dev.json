@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\khami\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\khami\\.nuget\\packages"
+    ]
+  }
+}

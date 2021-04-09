@@ -1,0 +1,13 @@
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\bin\Debug\netcoreapp3.1\Laba2.exe
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\bin\Debug\netcoreapp3.1\Laba2.deps.json
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\bin\Debug\netcoreapp3.1\Laba2.runtimeconfig.json
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\bin\Debug\netcoreapp3.1\Laba2.runtimeconfig.dev.json
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\bin\Debug\netcoreapp3.1\Laba2.dll
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\bin\Debug\netcoreapp3.1\Laba2.pdb
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\obj\Debug\netcoreapp3.1\Laba2.csprojAssemblyReference.cache
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\obj\Debug\netcoreapp3.1\Laba2.AssemblyInfoInputs.cache
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\obj\Debug\netcoreapp3.1\Laba2.AssemblyInfo.cs
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\obj\Debug\netcoreapp3.1\Laba2.csproj.CoreCompileInputs.cache
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\obj\Debug\netcoreapp3.1\Laba2.dll
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\obj\Debug\netcoreapp3.1\Laba2.pdb
+E:\Универ\АТСД\ATSD-projects\Laba2\Laba2\obj\Debug\netcoreapp3.1\Laba2.genruntimeconfig.cache
