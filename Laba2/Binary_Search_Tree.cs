@@ -71,18 +71,15 @@ namespace Laba2
             Console.WriteLine();
             Console.WriteLine("the number of Left son nodes in a BBST:" + countt);
         }        
-        private int CountNodes(Node<T> current,int countt=0) 
+        private int CountNodes(Node<T> current)
         {
-            if (current != null)
+            if (current == null) return 0;
+            if (current.Left == null)
+                return CountNodes(current.Right) + 1;
+            else
             {
-                if (current.Left!=null)
-                    CountNodes(current.Left, countt++);
-               
-                if (current.Right!=null)
-                    CountNodes(current.Right, countt++);
-                countt++;
+                return CountNodes(current.Left) + CountNodes(current.Right) + 1;
             }
-            return countt;  
         }
 
         private Node<T> Balance(Node<T> current)
