@@ -357,5 +357,40 @@ namespace Laba2
                 return temp;
             }
         }
+        public Tree<T> DeleteEven()
+        {
+            var tree = new Tree<T>();
+            var result = ToList().Where(x => Convert.ToInt32(x) % 2 != 0);
+            foreach (var item in result)
+            {
+                tree.NewNode(item);
+            }
+
+            return tree;
+        }
+        private  void ToList(Node<T> node, List<T> list)
+        {
+            if (node == null)
+            {
+                return;
+            }
+            list.Add(node.Data);
+            if (node.Left != null)
+            {
+                ToList(node.Left, list);
+            }
+
+            if (node.Right != null)
+            {
+                ToList(node.Right, list);
+            }
+        }
+
+        public List<T> ToList()
+        {
+            var list = new List<T>();
+            ToList(Head, list);
+            return list;
+        }
     }   
 }
