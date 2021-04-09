@@ -12,14 +12,7 @@ namespace Laba2
         public void NewNode(T number)
         {
             Node<T> node = new Node<T>(number);
-            if (Head == null)
-            {
-                Head = node;
-            }
-            else
-            {
-                AddNode(Head,node);
-            }
+            Head = Head == null ? node : AddNode(Head, node);
         }
         private Node<T> AddNode(Node<T> current, Node<T> node)
         {
@@ -28,7 +21,6 @@ namespace Laba2
                 current = node;
                 return current;
             }
-
             if (node.Data.CompareTo(current.Data) < 0)
             {
                 current.Left = AddNode(current.Left, node);
@@ -44,7 +36,7 @@ namespace Laba2
         public void Print() 
         {
             var list = new List<T>();
-            Print_1(list,Head);
+            list=Print_1(list,Head);
             Console.WriteLine("Ascending order: ");
             foreach (var i in list)
             {
@@ -78,9 +70,8 @@ namespace Laba2
             int countt=CountNodes(Head.Left);
             Console.WriteLine();
             Console.WriteLine("the number of Left son nodes in a BBST:" + countt);
-            
         }        
-        public int CountNodes(Node<T> current,int countt=0) 
+        private int CountNodes(Node<T> current,int countt=0) 
         {
             if (current != null)
             {
@@ -96,31 +87,30 @@ namespace Laba2
 
         private Node<T> Balance(Node<T> current)
         {
-            if (current != null)
-            {
+           
                 if (Differense(current) > 1)
                 {
                     if (Differense(current.Left) > 0)
                     {
-                        Right_Left_Rotation(current);
+                        current=Right_Left_Rotation(current);
                     }
                     else
                     {
-                        Right_Rotation(current);
+                        current=Right_Rotation(current);
                     }
                 }
                 else if (Differense(current) < -1)
                 {
                     if (Differense(current.Right) > 0)
                     {
-                        Left_Right_Rotation(current);
+                        current=Left_Right_Rotation(current);
                     }
                     else
                     {
-                        Left_Rotation(current);
+                        current=Left_Rotation(current);
                     }
                 }
-            }
+            
             return current;
         }
 
@@ -152,15 +142,15 @@ namespace Laba2
         private Node<T> Left_Rotation(Node<T> current)
         {
             Node<T> newNode = current.Right;
-            current.Right=newNode.Left;
+            current.Right = newNode.Left;
             newNode.Left = current;
             return newNode;
         }
 
         private Node<T> Right_Rotation(Node<T> current)
-        {
+        { 
             Node<T> newNode = current.Left;
-            current.Left = newNode.Right;
+            current.Left = newNode.Right; 
             newNode.Right = current;
             return newNode;
         }

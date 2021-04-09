@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="71efbd53-3234-4d4e-8088-c973e5f0d7e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laba2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laba2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Laba2/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Laba2/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binary_Search_Tree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Binary_Search_Tree.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Laba2.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Laba2.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,15 +21,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/Tree.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Binary_Search_Tree.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/TreeNode.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Node.cs" />
+      <option value="$PROJECT_DIR$/Program.cs" />
       <option value="$PROJECT_DIR$/Binary_Search_Tree.cs" />
+      <option value="$PROJECT_DIR$/Node.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qoJlQ3gagCxzvbAdrEw3KuVBlq" />
@@ -71,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617740161799</updated>
       <workItem from="1617740168794" duration="2040000" />
-      <workItem from="1617787799059" duration="10316000" />
+      <workItem from="1617787799059" duration="14236000" />
     </task>
     <servers />
   </component>
