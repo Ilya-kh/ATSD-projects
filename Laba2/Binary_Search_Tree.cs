@@ -72,7 +72,7 @@ namespace Laba2
             Console.WriteLine();
             Console.WriteLine("the number of Left son nodes in a BBST:" + countt);
         }        
-        private int CountNodes(Node<T> current)
+        private static int CountNodes(Node<T> current)
         {
             if (current == null) return 0;
             if (current.Left == null)
@@ -108,8 +108,7 @@ namespace Laba2
                         current=Left_Rotation(current);
                     }
                 }
-            
-            return current;
+                return current;
         }
 
         private int Differense(Node<T> current)
@@ -261,10 +260,13 @@ namespace Laba2
             else 
               return Search(current.Left,data);
         }
-
         public bool IsEmpty()
         {
             return Head == null;
+        }
+        public int Size()
+        {
+            return CountNodes(Head);
         }
     }
 }
