@@ -23,6 +23,10 @@ namespace Laba2
             Console.WriteLine(newtree.IsEmpty());
             Console.WriteLine(newtree.Size());
             Console.WriteLine(newtree.SumKeys());
+            
+            newtree.Print();
+            var tree = newtree.CopyTree();
+            tree.Print();
         }
     }
 }

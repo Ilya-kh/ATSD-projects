@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualBasic.FileIO;
+using System.Linq;     
 
 
 namespace Laba2
 {
-    public class Tree<T> where T : IComparable<T>
+    public class Tree<T> where T : IComparable<T>, IComparable
     {
         private Node<T> Head { get; set; }
         public int Count = 0;
-
+        public Tree(Node<T> node)
+        {
+            Head = node;
+        }
+        public Tree(){}
         public void NewNode(T number)
         {
             Node<T> node = new Node<T>(number);
@@ -332,5 +337,25 @@ namespace Laba2
             return Convert.ToInt32(current.Data) + Sum(current.Left, count) + Sum(current.Right, count);
             
         }
-    }
+        public Tree<T> CopyTree()
+        {
+            Tree<T> tree = new Tree<T>(this.Copy(Head));
+            return tree;
+        }   
+
+        private Node<T> Copy(Node<T> current)
+        {
+            if (current == null)
+            {
+                return null;
+            }
+            else
+            {
+                var temp = new Node<T>(current.Data);
+                temp.Left = Copy(current.Left);
+                temp.Right = Copy(current.Right);
+                return temp;
+            }
+        }
+    }   
 }
