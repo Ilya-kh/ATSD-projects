@@ -9,7 +9,7 @@ namespace Laba2
     public class Tree<T> where T : IComparable<T>, IComparable
     {
         private Node<T> Head { get; set; }
-        public int Count = 0;
+       
         public Tree(Node<T> node)
         {
             Head = node;
@@ -39,7 +39,7 @@ namespace Laba2
             }
             return current;
         }
-        public void Print() 
+        public List<T> Print() 
         {
             var list = new List<T>();
             list=Print_1(list,Head);
@@ -63,7 +63,7 @@ namespace Laba2
             Console.WriteLine();
             Console.WriteLine("Postorder : ");
             print_postorder(Head);
-            
+            return list;
         }
         
         private List<T> Print_1(List<T> list, Node<T> current)
@@ -85,7 +85,7 @@ namespace Laba2
         
         public void CountNodes_() {
             Console.WriteLine();
-            Console.WriteLine("the number of Left son nodes in a BBST:" + CountNodes(Head.Left));
+            Console.WriteLine($"the number of Left son nodes in a BBST:{CountNodes(Head.Left)}" );
         }   
         
         private static int CountNodes(Node<T> current)
@@ -401,5 +401,22 @@ namespace Laba2
                 NewNode(i);
             }
         }
+
+        public bool IsBalanced()
+        { 
+            return Differense(Head) < 2 && Differense(Head) > -2;
+        }
+
+        public T FindSecondLargest()
+        {
+            var list = Print();
+            return list[list.Count-1];
+        }
+
+        public bool ContainsBBST(Tree<T> tree)
+        {
+            return this.ToList().Except(tree.ToList()).Any();
+        }
+
     }   
 }

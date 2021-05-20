@@ -23,12 +23,14 @@ namespace Laba2
             Console.WriteLine(newtree.IsEmpty());
             Console.WriteLine(newtree.Size());
             Console.WriteLine(newtree.SumKeys());
-            
-            
+            Console.WriteLine(newtree.IsBalanced());
+
             var tree = newtree.DeleteEven();
             //tree.Print();
             //newtree.DeleteEven();
             tree.Print();
+            Console.WriteLine(tree.FindSecondLargest());
+            
         }
     }
 }
